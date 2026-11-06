@@ -21,7 +21,7 @@ void Application::drawPanel()
     ImGui::Begin("##Panel", nullptr, kFlags);
 
     ImGui::PushFont(m_fonts.title);
-    ImGui::TextUnformatted("Next Move Predictor");
+    ImGui::TextUnformatted("Chess Engine");
     ImGui::PopFont();
     ImGui::TextDisabled("Alpha-beta search  \xC2\xB7  PeSTO evaluation");
     ImGui::Dummy({0.f, 6.f * m_layout.scale});

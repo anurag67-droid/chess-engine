@@ -22,7 +22,7 @@ Application::Application()
 {
     sf::ContextSettings settings;
     settings.antiAliasingLevel = 4;
-    m_window.create(sf::VideoMode({1280u, 800u}), "Chess Next Move Predictor", sf::Style::Default,
+    m_window.create(sf::VideoMode({1280u, 800u}), "Chess Engine", sf::Style::Default,
                     sf::State::Windowed, settings);
     m_window.setFramerateLimit(60);
     m_window.setMinimumSize(sf::Vector2u{960u, 640u});

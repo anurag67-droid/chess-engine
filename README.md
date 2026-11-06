@@ -1,8 +1,9 @@
 <div align="center">
 
-# Chess Next Move Predictor
+# Chess Engine
 
-A desktop chess board with a built-in C++ engine that analyses every position and predicts the best next move.
+A multithreaded alpha-beta chess engine written in C++17, with a desktop board to play against it
+and analyse positions: live evaluation bar, search depth and best-move arrow.
 
 [![C++17](https://img.shields.io/badge/C++-17-00599C?logo=c%2B%2B)](https://en.cppreference.com/w/cpp/17)
 [![SFML](https://img.shields.io/badge/Graphics-SFML%203-8CC445)](https://github.com/SFML/SFML)
@@ -37,11 +38,11 @@ A desktop chess board with a built-in C++ engine that analyses every position an
 You need a C++17 compiler and CMake 3.16+. SFML 3, Dear ImGui, ImGui-SFML and chess.hpp are git submodules.
 
 ```bash
-git clone --recursive https://github.com/anurag67-droid/chess-next-move-predictor.git
-cd chess-next-move-predictor
+git clone --recursive https://github.com/anurag67-droid/chess-engine.git
+cd chess-engine
 cmake -S . -B build
 cmake --build build -j
-./build/ChessNextMovePredictor
+./build/ChessEngine
 ```
 
 If you already cloned without `--recursive`, run `git submodule update --init` first.
@@ -89,3 +90,9 @@ third_party/  SFML, Dear ImGui, ImGui-SFML, chess.hpp (submodules)
 - No opening book or endgame tablebases.
 - The evaluation is hand-written and simple, so the engine is far weaker than engines like Stockfish.
 - Move ordering has no killer-move or history heuristics yet, so it searches fewer plies than stronger engines.
+
+## Related
+
+[chess-next-move-predictor](https://github.com/anurag67-droid/chess-next-move-predictor) is a separate
+project that does the opposite: instead of the best move, it predicts the move a specific human player
+will make, with a neural network trained on Lichess games.
