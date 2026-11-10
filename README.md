@@ -1,6 +1,6 @@
 <div align="center">
 
-# Chess Engine
+# Kestrel: C++ Chess Engine
 
 A multithreaded alpha-beta chess engine written in C++17, with a desktop board to play against it
 and analyse positions: live evaluation bar, search depth and best-move arrow.
@@ -42,7 +42,7 @@ git clone --recursive https://github.com/anurag67-droid/chess-engine.git
 cd chess-engine
 cmake -S . -B build
 cmake --build build -j
-./build/ChessEngine
+./build/Kestrel
 ```
 
 If you already cloned without `--recursive`, run `git submodule update --init` first.
@@ -93,6 +93,6 @@ third_party/  SFML, Dear ImGui, ImGui-SFML, chess.hpp (submodules)
 
 ## Related
 
-[chess-next-move-predictor](https://github.com/anurag67-droid/chess-next-move-predictor) is a separate
+[Mimic](https://github.com/anurag67-droid/chess-next-move-predictor) is a separate
 project that does the opposite: instead of the best move, it predicts the move a specific human player
 will make, with a neural network trained on Lichess games.
